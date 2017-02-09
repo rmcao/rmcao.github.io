@@ -138,7 +138,7 @@
 
     <p>I’m a fourth-year, undergraduate student majoring in Computer Science and Applied Mathematics at <a href="http://www.ucla.edu">University of California, Los Angeles</a>.</p>
 
-<p>I work as an undergraduate researcher in <a href="http://vcla.stat.ucla.edu">Center for Vision, Cognition, Learning,and Autonomy</a> since September 2015, under the supervision of Professor Song-Chun Zhu. I currently work on Dr. Quanshi Zhang&rsquo;s Lifelong Learning &amp; Visual Knowledge Base project, which is to mine a comprehensive visual knowledge base of hierarchical visual concepts from web images with minimum supervision.</p>
+<p>I work as an undergraduate researcher in <a href="http://vcla.stat.ucla.edu">Center for Vision, Cognition, Learning,and Autonomy</a> since September 2015, advised by <a href="http://www.stat.ucla.edu/~sczhu/">Prof. Song-Chun Zhu</a>.</p>
 
 
     <div class="row">
@@ -206,16 +206,21 @@
     
 
     <div class="col-md-12">
+      <a href="https://rmcao.github.io/publication/semantic-mining/">
+        <img src="https://rmcao.github.ioimg/CNN_AOG.jpg" class="pub-banner" itemprop="image">
+      </a>
+    </div>
+    <div class="col-md-12">
 
     
 
       <h3 class="article-title" itemprop="name">
-        <a href="https://rmcao.github.io/publication/semantic-mining/" itemprop="url">Multi-Shot Mining Semantic Part Concepts in CNNs</a>
+        <a href="https://rmcao.github.io/publication/semantic-mining/" itemprop="url">Growing Interpretable Part Graphs on ConvNets via Multi-Shot Learning</a>
       </h3>
 
       <div class="pub-abstract" itemprop="text">
         
-        This paper proposes a new learning strategy that incrementally embeds new object-part concepts into a pre-trained convolutional neural network (CNN), in order to 1) explore explicit semantics for the CNN units and 2) gradually transfer the pre-trained CNN into a &#34;white-box&#34; model for hierarchical object understanding. Given part annotations on a very small number (e.g. 3--12) of objects, our method mines certain units from the pre-trained CNN and associate them with different part concepts. We use a four-layer And-Or graph to organize the CNN units, which clarifies their internal semantic hierarchy. Our method is guided by a small number of part annotations, and it achieves superior part-localization performance (about 28%--107% improvement in part center prediction).
+        This paper proposes a learning strategy that extracts object-part concepts from a pre-trained convolutional neural network (CNN), in an attempt to 1) explore explicit semantics hidden in CNN units and 2) gradually grow a semantically interpretable graphical model on the pre-trained CNN for hierarchical object understanding. Given part annotations on very few (e.g., 3—12) objects, our method mines certain latent patterns from the pre-trained CNN and associates them with different semantic parts. We use a four-layer And-Or graph to organize the mined latent patterns, so as to clarify their internal semantic hierarchy. Our method is guided by a small number of part annotations, and it achieves superior performance (about 13%—107% improvement) in part center prediction on the PASCAL VOC and ImageNet datasets.
         
       </div>
 
@@ -227,7 +232,7 @@
 
       <div class="pub-publication">
         
-        To appear in <em>AAAI</em>
+        In Proceedings of <em>AAAI-17</em>
         
       </div>
 
@@ -249,6 +254,10 @@
 
 
 
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://sites.google.com/site/cnnsemantics/">
+  Project
+</a>
 
 
 
@@ -381,7 +390,7 @@
   <div class="container">
     <p class="powered-by">
 
-      &copy; 2016 Ruiming Cao &middot; 
+      &copy; 2017 Ruiming Cao &middot; 
 
       Powered by the <a href="https://github.com/gcushen/hugo-academic" target="_blank">Academic
       theme</a> for <a href="http://gohugo.io" target="_blank">Hugo</a>.
