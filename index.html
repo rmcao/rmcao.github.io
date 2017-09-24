@@ -6,11 +6,19 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="theme" content="hugo-academic">
-  <meta name="generator" content="Hugo 0.17" />
+  <meta name="generator" content="Hugo 0.19" />
   <meta name="author" content="Ruiming Cao">
   
 
-  <link rel="stylesheet" href="/css/highlight.min.css">
+  
+  
+  
+  
+    
+    
+    <link rel="stylesheet" href="/css/highlight.min.css">
+    
+  
   <link rel="stylesheet" href="/css/bootstrap.min.css">
   <link rel="stylesheet" href="/css/font-awesome.min.css">
   <link rel="stylesheet" href="/css/academicons.min.css">
@@ -54,29 +62,53 @@
       
       <ul class="nav navbar-nav navbar-right">
         
+
+        
+
         <li class="nav-item">
           <a href="/#about" data-target="#about">
-            Home
+            
+            <span>Home</span>
           </a>
         </li>
+
         
+        
+
+        
+
         <li class="nav-item">
           <a href="/#publications" data-target="#publications">
-            Publications
+            
+            <span>Publications</span>
           </a>
         </li>
+
         
+        
+
+        
+
         <li class="nav-item">
           <a href="/#posts" data-target="#posts">
-            Posts
+            
+            <span>Posts</span>
           </a>
         </li>
+
         
+        
+
+        
+
         <li class="nav-item">
           <a href="/#contact" data-target="#contact">
-            Contact
+            
+            <span>Contact</span>
           </a>
         </li>
+
+        
         
       </ul>
 
@@ -111,14 +143,20 @@
       <div class="portrait-title">
         <h2 itemprop="name">Ruiming Cao</h2>
         <h3 itemprop="jobTitle"></h3>
-        <h3 itemprop="worksFor">University of California, Los Angeles</h3>
+        
+        <h3 itemprop="worksFor">
+          
+          University of California, Los Angeles
+          
+        </h3>
+        
       </div>
 
       <ul class="social-icon" aria-hidden="true">
         
         
         <li>
-          <a href="//github.com/rmcao">
+          <a href="//github.com/rmcao" target="_blank">
             <i class="fa fa-github big-icon"></i>
           </a>
         </li>
@@ -131,11 +169,11 @@
 
     <p><br></p>
 
-<p>I’m a fourth-year, undergraduate student majoring in Computer Science and Applied Mathematics at <a href="http://www.ucla.edu">University of California, Los Angeles</a>. I&rsquo;m originally from Beijing, China.</p>
+<p>I&rsquo;m a graduate student at <a href="http://www.ucla.edu">University of California, Los Angeles</a> pursuing Master degree in computer science. I had my undergraduate study double majoring in computer science and applied mathematics also at UCLA. I&rsquo;m originally from Beijing, China.</p>
 
-<p>I work as an undergraduate researcher in <a href="http://vcla.stat.ucla.edu">Center for Vision, Cognition, Learning,and Autonomy</a> since September 2015, supervised by <a href="http://www.stat.ucla.edu/~sczhu/">Prof. Song-Chun Zhu</a>.</p>
+<p>I have been working as an student researcher in <a href="http://vcla.stat.ucla.edu">Center for Vision, Cognition, Learning,and Autonomy</a> since September 2015, supervised by <a href="http://www.stat.ucla.edu/~sczhu/">Prof. Song-Chun Zhu</a>.</p>
 
-<p>My research interests are computer vision and machine learning, specifically including weakly-supervised learning, unsupervised learning, knowledge transfer and active learning.</p>
+<p>My research interests are computer vision and machine learning.</p>
 
 
     <div class="row">
@@ -203,10 +241,68 @@
     
 
     <div class="col-md-12">
-      <a href="https://rmcao.github.io/publication/semantic-mining/">
-        <img src="https://rmcao.github.io/img/cnn_aog.JPG" class="pub-banner" itemprop="image">
-      </a>
+
+    
+
+      <h3 class="article-title" itemprop="name">
+        <a href="https://rmcao.github.io/publication/active%20QA/" itemprop="url">Mining Part Concepts from CNNs via Active Question-Answering</a>
+      </h3>
+
+      <div class="pub-abstract" itemprop="text">
+        
+        Given a convolutional neural network (CNN) that is pre-trained for object classification, this paper proposes to use active question-answering to weakly-supervised semanticize neural patterns in conv-layers of the CNN and mine part concepts. For each part concept, we mine neural patterns in the pre-trained CNN, which are related to the target part, and use these patterns to construct an And-Or graph (AOG) to represent the target part. The And-Or graph (AOG) represents a four-layer semantic hierarchy of a part as a white-box model, which associates different CNN units with different part/sub-part semantics. We start an active human-computer communication to incrementally grow such an AOG on the pre-trained CNN as follows. We allow the computer to actively detect objects, whose neural patterns cannot be explained by the current AOG. Then, the computer asks human about the unexplained objects, and uses the answers to automatically discover certain CNN patterns corresponding to the missing knowledge. We incrementally grow new sub-AOG branches to encode new knowledge discovered during the active-learning process. In experiments, our method exhibited great learning efficiency. Our method used about 1/6 of the part annotations for training, but achieved similar or even much better part-localization performance than fast-RCNN methods on the PASCAL VOC Part dataset and the CUB200-2011 dataset.
+        
+      </div>
+
+      <div class="pub-authors" itemprop="author">
+        
+        Quanshi Zhang, Ruiming Cao, Ying Nian Wu, Song-Chun Zhu
+        
+      </div>
+
+      <div class="pub-publication">
+        
+        In Proceedings of <em>CVPR-17</em>
+        
+      </div>
+
+      <div class="pub-links">
+        
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://rmcao.github.io/publication/active%20QA/">
+  Details
+</a>
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/1704.03173">
+  PDF
+</a>
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline btn-xs" href="https://sites.google.com/site/convpart/">
+  Project
+</a>
+
+
+
+      </div>
+
     </div>
+  </div>
+</div>
+
+    
+    <div class="pub-list-item" itemscope itemtype="http://schema.org/CreativeWork">
+  <div class="row">
+
+    
+
     <div class="col-md-12">
 
     
@@ -302,6 +398,7 @@
 
 <div class="article-list-item" itemscope itemprop="blogPost">
   
+  
   <h3 class="article-title" itemprop="name">
     <a href="https://rmcao.github.io/post/Migration-notice/" itemprop="url">Site Migration</a>
   </h3>
@@ -314,6 +411,8 @@
       Fri, Dec 23, 2016
     </time>
   </span>
+
+  
 
   
   
@@ -332,7 +431,7 @@
   </div>
   <p class="read-more">
     <a href="https://rmcao.github.io/post/Migration-notice/" class="btn btn-primary btn-outline">
-      Full Article
+      CONTINUE READING
     </a>
   </p>
 </div>
@@ -364,6 +463,12 @@
     <p>Email: caoruiming[at]gmail[dot]com</p>
 
     <ul class="fa-ul">
+
+      
+
+      
+
+      
 
       
 
@@ -409,6 +514,7 @@
     <script src="/js/jquery-1.12.3.min.js"></script>
     <script src="/js/bootstrap.min.js"></script>
     <script src="/js/isotope.pkgd.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.imagesloaded/4.1.1/imagesloaded.pkgd.min.js"></script>
     <script src="/js/hugo-academic.js"></script>
     
 
@@ -435,8 +541,16 @@
     
 
     
-    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.3.0/highlight.min.js"></script>
-    <script>hljs.initHighlightingOnLoad();</script>
+    
+      
+      <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+      
+
+      
+
+      <script>hljs.initHighlightingOnLoad();</script>
+    
 
     
     

@@ -26,17 +26,17 @@
   <link rel="stylesheet" href="/css/hugo-academic.css">
   
 
-  <link rel="alternate" href="https://rmcao.github.io/publication/index.xml" type="application/rss+xml" title="Ruiming Cao&#39;s Site">
-  <link rel="feed" href="https://rmcao.github.io/publication/index.xml" type="application/rss+xml" title="Ruiming Cao&#39;s Site">
+  <link rel="alternate" href="https://rmcao.github.io/index.xml" type="application/rss+xml" title="Ruiming Cao&#39;s Site">
+  <link rel="feed" href="https://rmcao.github.io/index.xml" type="application/rss+xml" title="Ruiming Cao&#39;s Site">
 
   <link rel="icon" type="image/png" href="/img/icon.png">
   <link rel="apple-touch-icon" type="image/png" href="/img/apple-touch-icon.png">
 
-  <link rel="canonical" href="https://rmcao.github.io/publication/">
+  <link rel="canonical" href="https://rmcao.github.io/publication/active%20QA/">
 
   
 
-  <title>Publications | Ruiming Cao&#39;s Site</title>
+  <title>Mining Part Concepts from CNNs via Active Question-Answering | Ruiming Cao&#39;s Site</title>
 
 </head>
 <body id="top" data-spy="scroll" data-target="#navbar-main" data-offset="71">
@@ -116,101 +116,116 @@
   </div>
 </nav>
 
+<div class="pub" itemscope itemtype="http://schema.org/CreativeWork">
 
+  
 
-
-<div class="container">
-  <div class="row">
-    <div class="col-md-12">
-      <h1>Publications</h1>
-
+  <div class="container pub-title">
+    <h1 itemprop="name">Mining Part Concepts from CNNs via Active Question-Answering</h1>
+    <span class="pub-authors" itemprop="author">
+      
+      Quanshi Zhang, Ruiming Cao, Ying Nian Wu, Song-Chun Zhu
+      
+    </span>
+    <span class="pull-right">
       
 
-      <p>
-        Filter by type:
-        <select class="pub-filters-select">
-          <option value="*">All</option>
-          
-        </select>
-      </p>
-
-      <div id="container-publications">
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-md-12 isotope-item pubtype-0">
-          <i class="fa fa-file-text-o" aria-hidden="true"
-             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>Mining Part Concepts from CNNs via Active Question-Answering
-          <p>
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://rmcao.github.io/publication/active%20QA/">
-  Details
-</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/abs/1704.03173">
-  PDF
-</a>
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://sites.google.com/site/convpart/">
-  Project
-</a>
-
-
-</p>
-        </div>
-
-        
-
-        
-          
-        
-
-        <div class="grid-sizer col-md-12 isotope-item pubtype-0">
-          <i class="fa fa-file-text-o" aria-hidden="true"
-             style="color:#03396c;font-size:80%;padding-top:6px; padding-right: 10px;"></i>Growing Interpretable Part Graphs on ConvNets via Multi-Shot Learning
-          <p>
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://rmcao.github.io/publication/semantic-mining/">
-  Details
-</a>
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://arxiv.org/pdf/1611.04246v1">
-  PDF
-</a>
-
-
-
-
-
-
-<a class="btn btn-primary btn-outline btn-xs" href="https://sites.google.com/site/cnnsemantics/">
-  Project
-</a>
-
-
-</p>
-        </div>
-
-        
-      </div>
-
-    </div>
+    </span>
   </div>
+
 </div>
+<div class="article-container">
+
+  
+  <img src="/img/cnn_aog.JPG" class="pub-banner" itemprop="image">
+  
+
+  <h3>Abstract</h3>
+  <p class="pub-abstract" itemprop="text">Given a convolutional neural network (CNN) that is pre-trained for object classification, this paper proposes to use active question-answering to weakly-supervised semanticize neural patterns in conv-layers of the CNN and mine part concepts. For each part concept, we mine neural patterns in the pre-trained CNN, which are related to the target part, and use these patterns to construct an And-Or graph (AOG) to represent the target part. The And-Or graph (AOG) represents a four-layer semantic hierarchy of a part as a white-box model, which associates different CNN units with different part/sub-part semantics. We start an active human-computer communication to incrementally grow such an AOG on the pre-trained CNN as follows. We allow the computer to actively detect objects, whose neural patterns cannot be explained by the current AOG. Then, the computer asks human about the unexplained objects, and uses the answers to automatically discover certain CNN patterns corresponding to the missing knowledge. We incrementally grow new sub-AOG branches to encode new knowledge discovered during the active-learning process. In experiments, our method exhibited great learning efficiency. Our method used about 1/6 of the part annotations for training, but achieved similar or even much better part-localization performance than fast-RCNN methods on the PASCAL VOC Part dataset and the CUB200-2011 dataset.</p>
+
+  
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Publication</div>
+        <div class="col-xs-12 col-sm-9">In Proceedings of <em>IEEE Conference on Computer Vision and Pattern Recognition 2017 (CVPR-17)</em>.</div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading">Date</div>
+        <div class="col-xs-12 col-sm-9" itemprop="datePublished">
+          September, 2017
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="row" style="padding-top: 10px">
+    <div class="col-sm-1"></div>
+    <div class="col-sm-10">
+      <div class="row">
+        <div class="col-xs-12 col-sm-3 pub-row-heading" style="line-height:34px;">Links</div>
+        <div class="col-xs-12 col-sm-9">
+
+          
+
+
+
+
+<a class="btn btn-primary btn-outline" href="https://arxiv.org/abs/1704.03173">
+  PDF
+</a>
+
+
+
+
+
+
+<a class="btn btn-primary btn-outline" href="https://sites.google.com/site/convpart/">
+  Project
+</a>
+
+
+
+
+        </div>
+      </div>
+    </div>
+    <div class="col-sm-1"></div>
+  </div>
+  <div class="visible-xs space-below"></div>
+
+  <div class="space-below"></div>
+
+  <div class="article-style"></div>
+
+</div>
+
+<div class="container">
+  <nav>
+  <ul class="pager">
+    
+    <li class="previous"><a href="https://rmcao.github.io/publication/semantic-mining/"><span
+      aria-hidden="true">&larr;</span> Growing Interpretable Part Graphs on ConvNets via Multi-Shot Learning</a></li>
+    
+
+    
+  </ul>
+</nav>
+
+</div>
+
 <footer class="site-footer">
   <div class="container">
     <p class="powered-by">
