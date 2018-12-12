@@ -2,31 +2,30 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Ruiming Cao&#39;s Site on Ruiming Cao&#39;s Site</title>
-    <link>https://rmcao.github.io/index.xml</link>
+    <link>https://rmcao.github.io/</link>
     <description>Recent content in Ruiming Cao&#39;s Site on Ruiming Cao&#39;s Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2017 Ruiming Cao</copyright>
-    <lastBuildDate>Sun, 24 Sep 2017 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; 2018 Ruiming Cao</copyright>
+    <lastBuildDate>Tue, 11 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <atom:link href="/" rel="self" type="application/rss+xml" />
     
     <item>
-      <title>Mining Part Concepts from CNNs via Active Question-Answering</title>
-      <link>https://rmcao.github.io/publication/active%20QA/</link>
-      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
+      <title>Interpreting CNN Knowledge via an Explanatory Graph</title>
+      <link>https://rmcao.github.io/publication/explantory-graphs/</link>
+      <pubDate>Fri, 01 Dec 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://rmcao.github.io/publication/active%20QA/</guid>
+      <guid>https://rmcao.github.io/publication/explantory-graphs/</guid>
       <description></description>
     </item>
     
     <item>
-      <title>Site Migration</title>
-      <link>https://rmcao.github.io/post/Migration-notice/</link>
-      <pubDate>Fri, 23 Dec 2016 11:00:00 +0000</pubDate>
+      <title>Mining Part Concepts from CNNs via Active Question-Answering</title>
+      <link>https://rmcao.github.io/publication/active-qa/</link>
+      <pubDate>Fri, 01 Sep 2017 00:00:00 +0000</pubDate>
       
-      <guid>https://rmcao.github.io/post/Migration-notice/</guid>
-      <description>&lt;p&gt;I migrated my &lt;a href=&#34;http://sites.google.com/site/caoruiming&#34;&gt;original site&lt;/a&gt; hosted on Google Sites to here on Github Pages.&lt;/p&gt;
-</description>
+      <guid>https://rmcao.github.io/publication/active-qa/</guid>
+      <description></description>
     </item>
     
     <item>
