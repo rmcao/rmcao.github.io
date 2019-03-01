@@ -7,17 +7,26 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>&amp;copy; 2018 Ruiming Cao</copyright>
-    <lastBuildDate>Sat, 29 Dec 2018 00:00:00 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 19 Feb 2019 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="https://rmcao.github.io/publication/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Prostate cancer detection and segmentation in multi-parametric MRI via CNN and CRF</title>
-      <link>https://rmcao.github.io/publication/prostate-cancer-detection/</link>
+      <link>https://rmcao.github.io/publication/prostate-cancer-diagnosis/</link>
+      <pubDate>Tue, 19 Feb 2019 00:00:00 +0000</pubDate>
+      
+      <guid>https://rmcao.github.io/publication/prostate-cancer-diagnosis/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Prostate cancer detection and segmentation in multi-parametric MRI via CNN and CRF</title>
+      <link>https://rmcao.github.io/publication/prostate-cancer-segmentation/</link>
       <pubDate>Sat, 29 Dec 2018 00:00:00 +0000</pubDate>
       
-      <guid>https://rmcao.github.io/publication/prostate-cancer-detection/</guid>
+      <guid>https://rmcao.github.io/publication/prostate-cancer-segmentation/</guid>
       <description></description>
     </item>
     
