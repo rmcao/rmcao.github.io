@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Ruiming Cao&#39;s Site on Ruiming Cao&#39;s Site</title>
+    <title>Ruiming&#39;s Site</title>
     <link>https://rmcao.github.io/</link>
-    <description>Recent content in Ruiming Cao&#39;s Site on Ruiming Cao&#39;s Site</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <description>Recent content on Ruiming&#39;s Site</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator>
     <language>en-us</language>
-    <copyright>&amp;copy; 2018 Ruiming Cao</copyright>
-    <lastBuildDate>Tue, 11 Dec 2018 00:00:00 +0000</lastBuildDate>
-    <atom:link href="/" rel="self" type="application/rss+xml" />
+    <copyright>&amp;copy; {year} Ruiming Cao</copyright>
+    
+	    <atom:link href="https://rmcao.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
     
   </channel>
 </rss>

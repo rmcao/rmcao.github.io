@@ -1,29 +1,48 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
-    
-    
-    <url>
-      <loc>https://rmcao.github.io/categories/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>https://rmcao.github.io/author/ruiming/</loc>
+  </url>
   
-    
-    
-    <url>
-      <loc>https://rmcao.github.io/</loc>
-      <lastmod>2018-12-11T00:00:00+00:00</lastmod>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>https://rmcao.github.io/authors/</loc>
+    <priority>0</priority>
+  </url>
   
-    
-    
-    <url>
-      <loc>https://rmcao.github.io/tags/</loc>
-      <priority>0</priority>
-    </url>
-    
+  <url>
+    <loc>https://rmcao.github.io/author/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/publication_types/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/publication/</loc>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/authors/ruiming/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/tags/</loc>
+    <priority>0</priority>
+  </url>
   
 </urlset>
