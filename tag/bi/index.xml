@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>BI | Ruiming&#39;s website</title>
+    <link>https://rmcao.github.io/tag/bi/</link>
+      <atom:link href="https://rmcao.github.io/tag/bi/index.xml" rel="self" type="application/rss+xml" />
+    <description>BI</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Thu, 20 Feb 2020 14:12:35 -0700</lastBuildDate>
+    <image>
+      <url>https://rmcao.github.io/images/icon_hucd15fd8e38fe1904d624914b135f094f_55420_512x512_fill_lanczos_center_2.png</url>
+      <title>BI</title>
+      <link>https://rmcao.github.io/tag/bi/</link>
+    </image>
+    
+    <item>
+      <title>GU Radiologists vs AI in Detection of Prostate Cancer on MRI</title>
+      <link>https://rmcao.github.io/project/radaicomparison/</link>
+      <pubDate>Thu, 20 Feb 2020 14:12:35 -0700</pubDate>
+      <guid>https://rmcao.github.io/project/radaicomparison/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Joint Prostate Cancer Detection and Histological Score Prediction on MRI</title>
+      <link>https://rmcao.github.io/project/focalnet/</link>
+      <pubDate>Wed, 27 Feb 2019 11:53:33 -0700</pubDate>
+      <guid>https://rmcao.github.io/project/focalnet/</guid>
+      <description>&lt;p&gt;Multi-parametric MRI (mp-MRI) is considered the best non-invasive imaging modality for diagnosing prostate cancer (PCa). However, mp-MRI for PCa diagnosis is currently limited by the qualitative or semi-quantitative interpretation criteria, leading to inter-reader variability and a suboptimal ability to assess lesion aggressiveness. Convolutional neural networks (CNNs) are a powerful method to automatically learn the discriminative features for various tasks, including cancer detection. We propose a novel multi-class CNN, FocalNet, to jointly detect PCa lesions and predict their aggressiveness using Gleason score (GS). FocalNet characterizes lesion aggressiveness and fully utilizes distinctive knowledge from mp-MRI. We collected a prostate mp-MRI dataset from 417 patients who underwent 3T mp-MRI exams prior to robotic-assisted laparoscopic prostatectomy (RALP). FocalNet is trained and evaluated in this large study cohort with 5-fold cross-validation. In the free-response receiver operating characteristics (FROC) analysis for lesion detection, FocalNet achieved 89.7% and 87.9% sensitivity for index lesions and clinically significant lesions at 1 false positive per patient, respectively. For GS classification, evaluated by the receiver operating characteristics (ROC) analysis, FocalNet received the area under the curve (AUC) of 0.81 and 0.79 for the classifications of clinically significant PCa (GS&amp;gt;=3+4) and PCa with GS&amp;gt;=4+3, respectively. With the comparison to the prospective performance of radiologists using the current diagnostic guideline, FocalNet demonstrated comparable detection sensitivity for index lesions and clinically significant lesions, only 3.4% and 1.5% lower than highly experienced radiologists without statistical significance.&lt;/p&gt;
+</description>
+    </item>
+    
+  </channel>
+</rss>

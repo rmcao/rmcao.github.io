@@ -1,29 +1,64 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>https://rmcao.github.io/author/ruiming/</loc>
+    <loc>https://rmcao.github.io/project/motion3ddpc/</loc>
+    <lastmod>2020-06-26T12:29:37-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/tag/ci/</loc>
+    <lastmod>2020-06-26T12:29:37-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/project/</loc>
+    <lastmod>2020-06-26T12:29:37-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/</loc>
+    <lastmod>2020-06-26T12:29:37-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/tags/</loc>
+    <lastmod>2020-06-26T12:29:37-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/tag/bi/</loc>
+    <lastmod>2020-02-20T14:12:35-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/project/radaicomparison/</loc>
+    <lastmod>2020-02-20T14:12:35-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/project/focalnet/</loc>
+    <lastmod>2019-02-27T11:53:33-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/tag/cv/</loc>
+    <lastmod>2018-06-20T11:54:48-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/project/explanatorygraph/</loc>
+    <lastmod>2018-06-20T11:54:48-07:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>https://rmcao.github.io/project/growingpartgraph/</loc>
+    <lastmod>2017-12-20T12:37:56-07:00</lastmod>
   </url>
   
   <url>
     <loc>https://rmcao.github.io/authors/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rmcao.github.io/author/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rmcao.github.io/categories/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rmcao.github.io/publication_types/</loc>
-    <priority>0</priority>
   </url>
   
   <url>
@@ -31,18 +66,11 @@
   </url>
   
   <url>
+    <loc>https://rmcao.github.io/talk/</loc>
+  </url>
+  
+  <url>
     <loc>https://rmcao.github.io/authors/ruiming/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rmcao.github.io/</loc>
-    <priority>0</priority>
-  </url>
-  
-  <url>
-    <loc>https://rmcao.github.io/tags/</loc>
-    <priority>0</priority>
   </url>
   
 </urlset>

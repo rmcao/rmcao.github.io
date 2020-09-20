@@ -1,15 +1,16 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Tags on Ruiming&#39;s website</title>
+    <title>Tags | Ruiming&#39;s website</title>
     <link>https://rmcao.github.io/tags/</link>
-    <description>Recent content in Tags on Ruiming&#39;s website</description>
-    <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <copyright>&amp;copy; {year} Ruiming Cao</copyright>
-    
-	<atom:link href="https://rmcao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
-    
+      <atom:link href="https://rmcao.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+    <description>Tags</description>
+    <generator>Source Themes Academic (https://sourcethemes.com/academic/)</generator><language>en-us</language><copyright>© 2020 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Fri, 26 Jun 2020 12:29:37 -0700</lastBuildDate>
+    <image>
+      <url>https://rmcao.github.io/images/icon_hucd15fd8e38fe1904d624914b135f094f_55420_512x512_fill_lanczos_center_2.png</url>
+      <title>Tags</title>
+      <link>https://rmcao.github.io/tags/</link>
+    </image>
     
   </channel>
 </rss>
