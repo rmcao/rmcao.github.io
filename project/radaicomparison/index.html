@@ -309,21 +309,20 @@
   
   
     
-    
   
   
-  <meta property="twitter:card" content="summary">
+  <meta property="twitter:card" content="summary_large_image">
   
   <meta property="og:site_name" content="Ruiming&#39;s website">
   <meta property="og:url" content="https://rmcao.github.io/project/radaicomparison/">
   <meta property="og:title" content="GU Radiologists vs AI in Detection of Prostate Cancer on MRI | Ruiming&#39;s website">
-  <meta property="og:description" content="We validated our previously developed algorithm for prostate cancer detection using an independent patient cohort who went through radical prostatectomy and compared with genitourinary radiologists under the same setting."><meta property="og:image" content="https://rmcao.github.io/images/icon_hucd15fd8e38fe1904d624914b135f094f_55420_512x512_fill_lanczos_center_2.png">
-  <meta property="twitter:image" content="https://rmcao.github.io/images/icon_hucd15fd8e38fe1904d624914b135f094f_55420_512x512_fill_lanczos_center_2.png"><meta property="og:locale" content="en-us">
+  <meta property="og:description" content="We validated our previously developed algorithm for prostate cancer detection using an independent patient cohort who went through radical prostatectomy and compared with genitourinary radiologists under the same setting."><meta property="og:image" content="https://rmcao.github.io/project/radaicomparison/featured.png">
+  <meta property="twitter:image" content="https://rmcao.github.io/project/radaicomparison/featured.png"><meta property="og:locale" content="en-us">
   
     
-      <meta property="article:published_time" content="2020-02-20T14:12:35-07:00">
+      <meta property="article:published_time" content="2021-03-11T14:12:35-07:00">
     
-    <meta property="article:modified_time" content="2020-02-20T14:12:35-07:00">
+    <meta property="article:modified_time" content="2021-03-11T14:12:35-07:00">
   
 
   
@@ -349,8 +348,12 @@
   },
   "headline": "GU Radiologists vs AI in Detection of Prostate Cancer on MRI",
   
-  "datePublished": "2020-02-20T14:12:35-07:00",
-  "dateModified": "2020-02-20T14:12:35-07:00",
+  "image": [
+    "https://rmcao.github.io/project/radaicomparison/featured.png"
+  ],
+  
+  "datePublished": "2021-03-11T14:12:35-07:00",
+  "dateModified": "2021-03-11T14:12:35-07:00",
   
   "author": {
     "@type": "Person",
@@ -713,18 +716,26 @@
 
 
 
-  
+
+
+
+
+
+
+
 
   
   
+    
   
+
+
 <div class="article-container pt-3">
   <h1>GU Radiologists vs AI in Detection of Prostate Cancer on MRI</h1>
 
   
 
   
-    
 
 
 <div class="article-metadata">
@@ -748,7 +759,7 @@
     
       
     
-    Feb 20, 2020
+    Mar 11, 2021
   </span>
   
 
@@ -767,7 +778,7 @@
 
 </div>
 
-    
+  
 
 
 
@@ -793,45 +804,42 @@
 
 
   
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-  
-  
-  
     
   
-  
-  
-  
-  
-    
-  
-  <a class="btn btn-outline-primary my-1 mr-1" href="https://ww5.aievolution.com/ism2001/index.cfm?do=ev.viewEv&amp;ev=4133" target="_blank" rel="noopener">
-    
-    ISMRM 2020 (Journal manuscript in review)
-  </a>
+
+
+
+<a class="btn btn-outline-primary my-1 mr-1" href="https://onlinelibrary.wiley.com/doi/10.1002/jmri.27595" target="_blank" rel="noopener">
+  PDF
+</a>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 </div>
 
 
-  
+</div>
+
+
+<div class="article-header article-container featured-image-wrapper mt-4 mb-4" style="max-width: 720px; max-height: 540px;">
+  <div style="position: relative">
+    <img src="/project/radaicomparison/featured_hu94c4e2e454c423d04a3d19eee4e56738_50217_720x0_resize_lanczos_2.png" alt="" class="featured-image">
+    <span class="article-header-caption">Free-response receiver operating characteristics (FROC) analysis for index lesion detection for 126 patients in the evaluation cohort with detection sensitivity plotted as a function of the number of false-positive detections for each patient on average. The shaded area surrounding the FocalNet curve (blue) shows the 95% confidence interval for detection sensitivity by bootstrapping the patient population. Dots indicate each radiologist performance at suspicion score thresholds.</span>
+  </div>
 </div>
 
 
@@ -839,7 +847,16 @@
   <div class="article-container">
 
     <div class="article-style">
-      
+      <p>Background: Several deep learning-based techniques have been developed for prostate cancer (PCa) detection using multi-parametric MRI (mpMRI), but few of them have been rigorously evaluated relative to radiologists’ performance or whole-mount histopathology (WMHP).
+Purpose: To compare the performance of a previously proposed deep learning algorithm, FocalNet, and expert radiologists in the detection of PCa on mpMRI with WMHP as the reference.
+Study type: Retrospective, single-center study.
+Subjects: 553 patients (development cohort: 427 patients; evaluation cohort: 126 patients) who underwent 3 T mpMRI prior to radical prostatectomy from October 2010 to February 2018.
+Field Strength/Sequence: 3 T, T2-weighted imaging and diffusion-weighted imaging.
+Assessment: FocalNet was trained on the development cohort with the groundtruth lesion annotations. In evaluation cohort, FocalNet predicted PCa locations by detection points, with a confidence value for each point. Four fellowship-trained genitourinary (GU) radiologists independently evaluated the evaluation cohort to detect suspicious PCa foci, annotate detection point locations, and assign a five-point suspicion score (suspicion score 1: the least suspicious to PCa, suspicion score 5: the most suspicious to PCa) for each annotated detection point. The PCa detection performance of FocalNet and radiologists were evaluated by free-response receiver operating characteristics analysis for lesion detection sensitivity versus the number of false-positive detections at different thresholds on suspicion scores. The overall differential detection sensitivity is the detection sensitivity difference between each radiologist and FocalNet averaging over five suspicion score thresholds and four readers. Index lesions are defined as lesions with the highest Gleason Group and the largest pathological size, and clinically significant lesions are those with Gleason Group ≥ 2 or pathological size ≥10 mm.
+Statistical tests:  Bootstrap hypothesis test for the detection sensitivity between radiologists and FocalNet.
+Results: For detection points under high  with suspicion score 5, index lesion detection sensitivity was 38.3% for the radiologists and 38.7% for FocalNet at the cost of 0.101 false positives per patient. For detection points with suspicion score 4 or 5, index lesion detection sensitivity was 63.1% for the radiologists and 54.7% for FocalNet at the cost of 0.365 false positives per patient. For the overall differential detection sensitivity, FocalNet was 5.1% and 4.7% below the radiologists for clinically significant and index lesions, respectively; however, the differences were not statistically significant (P=0.413 and P=0.282, respectively).
+Data Conclusion: On the evaluation cohort, FocalNet achieved slightly lower but not statistically significant PCa detection performance compared to GU radiologists. Compared with radiologists, FocalNet demonstrated similar detection performance for a highly sensitive setting (suspicion score ≥ 1) or a highly specific setting (suspicion score = 5) while lower performance in between.</p>
+
     </div>
 
     
@@ -915,7 +932,7 @@
   
 
   <p class="powered-by">
-    © 2020 Ruiming Cao | Website icon from openmoji.org
+    © 2021 Ruiming Cao | Website icon from openmoji.org
   </p>
 
   
