@@ -5,7 +5,7 @@
     <link>https://rmcao.github.io/tag/ci/</link>
       <atom:link href="https://rmcao.github.io/tag/ci/index.xml" rel="self" type="application/rss+xml" />
     <description>CI</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Fri, 26 Jun 2020 12:29:37 -0700</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Thu, 24 Feb 2022 12:29:37 -0700</lastBuildDate>
     <image>
       <url>https://rmcao.github.io/images/icon_hucd15fd8e38fe1904d624914b135f094f_55420_512x512_fill_lanczos_center_2.png</url>
       <title>CI</title>
@@ -13,11 +13,12 @@
     </image>
     
     <item>
-      <title>Algorithmic self-calibration for optimized 3D differential phase contrast microscopy</title>
+      <title>Self-calibrated 3D differential phase contrast microscopy with optimized illumination</title>
       <link>https://rmcao.github.io/project/motion3ddpc/</link>
-      <pubDate>Fri, 26 Jun 2020 12:29:37 -0700</pubDate>
+      <pubDate>Thu, 24 Feb 2022 12:29:37 -0700</pubDate>
       <guid>https://rmcao.github.io/project/motion3ddpc/</guid>
-      <description></description>
+      <description>&lt;p&gt;3D phase imaging recovers an object’s volumetric refractive index from intensity and/or holographic measurements. Partially coherent methods, such as illumination-based differential phase contrast (DPC), are particularly simple to implement in a commercial brightfield microscope. 3D DPC acquires images at multiple focus positions and with different illumination source patterns in order to reconstruct 3D refractive index. Here, we present a practical extension of the 3D DPC method that does not require a precise motion stage for scanning the focus and uses optimized illumination patterns for improved performance. The user scans the focus by hand, using the microscope’s focus knob, and the algorithm self-calibrates the axial position to solve for the 3D refractive index of the sample through a computational inverse problem. We further show that the illumination patterns can be optimized by an end-to-end learning procedure. Combining these two, we demonstrate improved 3D DPC with a commercial microscope whose only hardware modification is LED array illumination.&lt;/p&gt;
+</description>
     </item>
     
   </channel>

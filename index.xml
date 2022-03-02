@@ -5,12 +5,21 @@
     <link>https://rmcao.github.io/</link>
       <atom:link href="https://rmcao.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Ruiming&#39;s website</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2021 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Thu, 11 Mar 2021 14:12:35 -0700</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Thu, 24 Feb 2022 12:29:37 -0700</lastBuildDate>
     <image>
       <url>https://rmcao.github.io/images/icon_hucd15fd8e38fe1904d624914b135f094f_55420_512x512_fill_lanczos_center_2.png</url>
       <title>Ruiming&#39;s website</title>
       <link>https://rmcao.github.io/</link>
     </image>
+    
+    <item>
+      <title>Self-calibrated 3D differential phase contrast microscopy with optimized illumination</title>
+      <link>https://rmcao.github.io/project/motion3ddpc/</link>
+      <pubDate>Thu, 24 Feb 2022 12:29:37 -0700</pubDate>
+      <guid>https://rmcao.github.io/project/motion3ddpc/</guid>
+      <description>&lt;p&gt;3D phase imaging recovers an object’s volumetric refractive index from intensity and/or holographic measurements. Partially coherent methods, such as illumination-based differential phase contrast (DPC), are particularly simple to implement in a commercial brightfield microscope. 3D DPC acquires images at multiple focus positions and with different illumination source patterns in order to reconstruct 3D refractive index. Here, we present a practical extension of the 3D DPC method that does not require a precise motion stage for scanning the focus and uses optimized illumination patterns for improved performance. The user scans the focus by hand, using the microscope’s focus knob, and the algorithm self-calibrates the axial position to solve for the 3D refractive index of the sample through a computational inverse problem. We further show that the illumination patterns can be optimized by an end-to-end learning procedure. Combining these two, we demonstrate improved 3D DPC with a commercial microscope whose only hardware modification is LED array illumination.&lt;/p&gt;
+</description>
+    </item>
     
     <item>
       <title>GU Radiologists vs AI in Detection of Prostate Cancer on MRI</title>
@@ -27,14 +36,6 @@ Statistical tests:  Bootstrap hypothesis test for the detection sensitivity betw
 Results: For detection points under high  with suspicion score 5, index lesion detection sensitivity was 38.3% for the radiologists and 38.7% for FocalNet at the cost of 0.101 false positives per patient. For detection points with suspicion score 4 or 5, index lesion detection sensitivity was 63.1% for the radiologists and 54.7% for FocalNet at the cost of 0.365 false positives per patient. For the overall differential detection sensitivity, FocalNet was 5.1% and 4.7% below the radiologists for clinically significant and index lesions, respectively; however, the differences were not statistically significant (P=0.413 and P=0.282, respectively).
 Data Conclusion: On the evaluation cohort, FocalNet achieved slightly lower but not statistically significant PCa detection performance compared to GU radiologists. Compared with radiologists, FocalNet demonstrated similar detection performance for a highly sensitive setting (suspicion score ≥ 1) or a highly specific setting (suspicion score = 5) while lower performance in between.&lt;/p&gt;
 </description>
-    </item>
-    
-    <item>
-      <title>Algorithmic self-calibration for optimized 3D differential phase contrast microscopy</title>
-      <link>https://rmcao.github.io/project/motion3ddpc/</link>
-      <pubDate>Fri, 26 Jun 2020 12:29:37 -0700</pubDate>
-      <guid>https://rmcao.github.io/project/motion3ddpc/</guid>
-      <description></description>
     </item>
     
     <item>
