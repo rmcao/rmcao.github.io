@@ -5,12 +5,28 @@
     <link>https://rmcao.github.io/</link>
       <atom:link href="https://rmcao.github.io/index.xml" rel="self" type="application/rss+xml" />
     <description>Ruiming&#39;s website</description>
-    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Thu, 24 Feb 2022 12:29:37 -0700</lastBuildDate>
+    <generator>Wowchemy (https://wowchemy.com)</generator><language>en-us</language><copyright>© 2022 Ruiming Cao | Website icon from openmoji.org</copyright><lastBuildDate>Thu, 25 Aug 2022 13:55:37 -0200</lastBuildDate>
     <image>
       <url>https://rmcao.github.io/images/icon_hucd15fd8e38fe1904d624914b135f094f_55420_512x512_fill_lanczos_center_2.png</url>
       <title>Ruiming&#39;s website</title>
       <link>https://rmcao.github.io/</link>
     </image>
+    
+    <item>
+      <title>Dynamic Structured Illumination Microscopy with a Neural Space-time Model</title>
+      <link>https://rmcao.github.io/project/speckleflowsim/</link>
+      <pubDate>Thu, 25 Aug 2022 13:55:37 -0200</pubDate>
+      <guid>https://rmcao.github.io/project/speckleflowsim/</guid>
+      <description>&lt;p&gt;Structured illumination microscopy (SIM) reconstructs a super-resolved image from multiple raw images captured with different illumination patterns; hence, acquisition speed is limited, making it unsuitable for dynamic scenes. We propose a new method, Speckle Flow SIM, that uses static patterned illumination with moving samples and models the sample motion during data capture in order to reconstruct the dynamic scene with super-resolution. Speckle Flow SIM relies on sample motion to capture a sequence of raw images. The spatio-temporal relationship of the dynamic scene is modeled using a neural space-time model with coordinate-based multi-layer perceptrons (MLPs), and the motion dynamics and the super-resolved scene are jointly recovered. We validate Speckle Flow SIM for coherent imaging in simulation and build a simple, inexpensive experimental setup with off-the-shelf components. We demonstrate that Speckle Flow SIM can reconstruct a dynamic scene with deformable motion and 1.88x the diffraction-limited resolution in experiment.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;@article{cao2022dynamic,
+  title={Dynamic Structured Illumination Microscopy with a Neural Space-time Model},
+  author={Cao, Ruiming and Liu, Fanglin Linda and Yeh, Li-Hao and Waller, Laura},
+  journal={arXiv preprint arXiv:2206.01397},
+  year={2022}
+}
+&lt;/code&gt;&lt;/pre&gt;
+</description>
+    </item>
     
     <item>
       <title>Self-calibrated 3D differential phase contrast microscopy with optimized illumination</title>
