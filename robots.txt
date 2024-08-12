@@ -1,3 +1,4 @@
 User-agent: *
+Disallow:
 
-Sitemap: https://rmcao.github.io/sitemap.xml
+Sitemap: http://0.0.0.0:8080/al-folio/sitemap.xml
