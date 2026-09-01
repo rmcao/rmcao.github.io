@@ -29,7 +29,7 @@
 
     <link rel="canonical" href="https://rmcao.net/">
     <link rel="icon" href="/assets/img/icon.png">
-    <link rel="stylesheet" href="/assets/css/site.css?v=20260901-10">
+    <link rel="stylesheet" href="/assets/css/site.css?v=20260901-13">
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XYKD5945BH"></script>
@@ -70,7 +70,7 @@
           <li>
             <a href="#phd-work-title">PhD work</a>
             <ul>
-              <li><a href="#spatiotemporal-dynamics">4D dynamics</a></li>
+              <li><a href="#spatiotemporal-dynamics">Parsing dynamics</a></li>
               <li><a href="#event-cameras">Noise &amp; denoising</a></li>
               <li><a href="#optics-codesign">Optics co-design</a></li>
             </ul>
@@ -112,7 +112,7 @@
         <div class="bio">
           <p>I am a research scientist in Adobe Nextcam team led by <a href="http://graphics.stanford.edu/~levoy/">Marc Levoy</a>. My work spans computational imaging and computer vision, with a lot of data collection and model &amp; hardware joint tweaking.</p>
 
-          <p>I obtained my Ph.D. from UC Berkeley, where I was advised by <a href="http://www.laurawaller.com">Laura Waller</a> and supported, in part, by Siebel Scholarship. I was also affiliated with the <a href="https://bair.berkeley.edu/index.html">Berkeley Artificial Intelligence Research (BAIR)</a>. I was a research intern in Google Research in 2021 and in Meta Reality Labs Research in 2022. I received M.S. in Computer Science from UCLA in 2019, where I was advised by <a href="http://kyungs.bol.ucla.edu/Site/Home.html">Kyung Hyun Sung</a> and <a href="http://web.cs.ucla.edu/~fab/">Fabien Scalzo</a>. I received B.S. in Computer Science and Applied Mathematics from UCLA.</p>
+          <p>I obtained my Ph.D. in EECS from UC Berkeley, where I was advised by <a href="http://www.laurawaller.com">Laura Waller</a> and supported, in part, by Siebel Scholarship. I was also affiliated with the <a href="https://bair.berkeley.edu/index.html">Berkeley Artificial Intelligence Research (BAIR)</a>. I was a research intern in Meta Reality Labs Research in 2022 and in Google Research in 2021. I received M.S. in CS from UCLA in 2019, where I was advised by <a href="http://kyungs.bol.ucla.edu/Site/Home.html">Kyung Hyun Sung</a> and <a href="http://web.cs.ucla.edu/~fab/">Fabien Scalzo</a>, and I also did college in CS and Math at UCLA.</p>
         </div>
 
         <nav class="intro-links" aria-label="Contact and external profiles">
@@ -124,26 +124,28 @@
       </section>
 
       <section class="research-overview" aria-labelledby="research-title">
-        <div class="section-heading">
-          <h2 id="research-title">Research</h2>
-        </div>
+        <details class="research-disclosure">
+          <summary class="section-heading">
+            <h2 id="research-title">Research</h2>
+          </summary>
 
-        <div class="research-copy">
-          <p>My research focuses on motion modeling and dynamic imaging. I jointly develop the optical system hardware and the computational methods to enhance our capabilities for observing and analyzing fast and complex dynamics. I work on various image modalities, including digital photography, optical microscopy, medical imaging, and most recently cryo-ET.</p>
+          <div class="research-copy">
+            <p>My research focuses on motion modeling and dynamic imaging. I jointly develop the optical system hardware and the computational methods to enhance our capabilities for observing and analyzing fast and complex dynamics. I work on various image modalities, including digital photography, optical microscopy, medical imaging, and most recently cryo-ET.</p>
 
-          <p><strong><em>Optical sensing methods for dynamic imaging.</em></strong> I develop optical sensing hardware by enhancing signal encoding through dynamic sensors and novel contrast mechanisms, specifically designed for imaging moving samples [<a href="https://ieeexplore.ieee.org/abstract/document/9887701">1</a>, <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12390/1239002/Speckle-flow-structured-illumination-microscopy-for-dynamic-super-resolution-imaging/10.1117/12.2648072.full">2</a>]. My work optimizes imaging hardware designs to improve signal quality and reduce acquisition time [<a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-13-3-1671&amp;id=469840">3</a>, <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/PC12996/PC129960D/Fast-quantitative-phase-imaging-with-an-LED-array-microscope-using/10.1117/12.3022419.full">4</a>]. Additionally, I have pioneered theoretical noise analysis for dynamic vision sensors, leveraging their unique properties for new applications [<a href="https://arxiv.org/abs/2404.01298">5</a>].</p>
+            <p><strong><em>Optical sensing methods for dynamic imaging.</em></strong> I develop optical sensing hardware by enhancing signal encoding through dynamic sensors and novel contrast mechanisms, specifically designed for imaging moving samples [<a href="https://ieeexplore.ieee.org/abstract/document/9887701">1</a>, <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/12390/1239002/Speckle-flow-structured-illumination-microscopy-for-dynamic-super-resolution-imaging/10.1117/12.2648072.full">2</a>]. My work optimizes imaging hardware designs to improve signal quality and reduce acquisition time [<a href="https://opg.optica.org/boe/fulltext.cfm?uri=boe-13-3-1671&amp;id=469840">3</a>, <a href="https://www.spiedigitallibrary.org/conference-proceedings-of-spie/PC12996/PC129960D/Fast-quantitative-phase-imaging-with-an-LED-array-microscope-using/10.1117/12.3022419.full">4</a>]. Additionally, I have pioneered theoretical noise analysis for dynamic vision sensors, leveraging their unique properties for new applications [<a href="https://arxiv.org/abs/2404.01298">5</a>].</p>
 
-          <figure class="overview-figure">
-            <img
-              src="/assets/img/encoding_methods.png"
-              alt="Optical sensing methods for dynamic imaging"
-              width="2426"
-              height="427"
-            >
-          </figure>
+            <figure class="overview-figure">
+              <img
+                src="/assets/img/encoding_methods.png"
+                alt="Optical sensing methods for dynamic imaging"
+                width="2426"
+                height="427"
+              >
+            </figure>
 
-          <p><strong><em>Parsing dynamics and inverse problem optimization with machine learning.</em></strong> I work on inverse problem optimization algorithms that parse spatiotemporal correlations from unlabeled data, overcoming the limitations of frame-by-frame processing [<a href="https://www.nature.com/articles/s41592-024-02417-0">6</a>]. The neural space-time model significantly enhances temporal resolution, image quality [<a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-32-20-35725&amp;id=559958">7</a>], and multi-modal alignment [<a href="https://arxiv.org/abs/2411.02672">8</a>] in image reconstruction . Furthermore, I am developing a large vision model for cryo-ET data processing tasks.</p>
-        </div>
+            <p><strong><em>Parsing dynamics and inverse problem optimization with machine learning.</em></strong> I work on inverse problem optimization algorithms that parse spatiotemporal correlations from unlabeled data, overcoming the limitations of frame-by-frame processing [<a href="https://www.nature.com/articles/s41592-024-02417-0">6</a>]. The neural space-time model significantly enhances temporal resolution, image quality [<a href="https://opg.optica.org/oe/fulltext.cfm?uri=oe-32-20-35725&amp;id=559958">7</a>], and multi-modal alignment [<a href="https://arxiv.org/abs/2411.02672">8</a>] in image reconstruction . Furthermore, I am developing a large vision model for cryo-ET data processing tasks.</p>
+          </div>
+        </details>
       </section>
 
       <section class="work-section" id="recent-work" aria-labelledby="recent-work-title">
@@ -221,8 +223,8 @@
 
           <article class="project">
             <div class="project-intro">
-              <p class="project-kicker">Dynamic imaging · inverse problems</p>
-              <h4 id="spatiotemporal-dynamics">Parsing 4D spatiotemporal dynamics</h4>
+              <p class="project-kicker">Inverse problems · 3D+time representation</p>
+              <h4 id="spatiotemporal-dynamics">Parsing dynamics for science</h4>
               <p>Sequential computational imaging is vulnerable to motion artifacts, but it also records rich temporal structure. I developed neural space-time models that jointly recover a scene and its motion, improving image quality while resolving dynamics that frame-by-frame reconstructions miss.</p>
             </div>
 
@@ -258,7 +260,7 @@
 
           <article class="project">
             <div class="project-intro">
-              <p class="project-kicker">Event cameras · computational sensing</p>
+              <p class="project-kicker">Event cameras · novel signal</p>
               <h4 id="event-cameras">Understanding noise &amp; denoising</h4>
               <p>Event cameras usually discard background noise and respond only to brightness changes. Noise2Image instead models photon-noise events as a signal, recovering static scene intensity that would otherwise be invisible to the sensor.</p>
             </div>
@@ -308,6 +310,10 @@
 
             <ul class="publication-list">
                 <li>
+                  S. Li, <strong>R. Cao</strong>, L. Waller, K. Monakhova, and S. Fridovich-Keil, “Sparse Light Field Sampling Improves Casual 3D and 4D Reconstruction,” <em>ECCV Workshops</em>, 2026.
+                  <span class="resource-links"><a href="https://arxiv.org/abs/2608.20602">[paper]</a> <a href="https://shamus.li/lightfield-gaussian-splatting/">[project]</a> <a href="https://drive.google.com/drive/folders/1D68RDdv5NK0_aY1kH_39CO9IjxuJBWja">[dataset]</a></span>
+                </li>
+                <li>
                   M. Zach, K.-C. Shen, <strong>R. Cao</strong>, M. Unser, L. Waller, and J. Dong, “Perturbative Fourier ptychographic microscopy for fast quantitative phase imaging,” <em>Optics Express</em>, vol. 33, no. 18, pp. 38984–38996, 2025.
                   <span class="resource-links"><a href="https://opg.optica.org/oe/abstract.cfm?uri=oe-33-18-38984">[paper]</a></span>
                 </li>
@@ -330,7 +336,7 @@
 
           <article class="project">
             <div class="project-intro">
-              <p class="project-kicker">Medical AI · magnetic resonance imaging</p>
+              <p class="project-kicker">Magnetic resonance imaging</p>
               <h4 id="medical-ai">Medical AI &amp; imaging</h4>
               <p>I developed deep learning methods for detecting, segmenting, and grading prostate cancer in multi-parametric MRI. The work paired whole-mount histopathology with large clinical imaging cohorts and compared model performance directly with radiologists.</p>
             </div>
@@ -367,7 +373,7 @@
 
           <article class="project">
             <div class="project-intro">
-              <p class="project-kicker">Explainable AI · computer vision</p>
+              <p class="project-kicker">Explainable AI</p>
               <h4 id="interpretability">Neural network interpretability</h4>
               <p>These projects study how convolutional networks encode object parts inside otherwise opaque feature maps. Explanatory graphs and active question-answering organize hidden activations into semantic structures that people can inspect and refine with very few annotations.</p>
             </div>
