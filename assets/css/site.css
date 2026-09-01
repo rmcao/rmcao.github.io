@@ -290,6 +290,10 @@ h1 strong {
   padding: clamp(3.5rem, 6vw, 5rem) 0 0;
 }
 
+#phd-work {
+  border-top: 0;
+}
+
 .section-heading {
   max-width: 680px;
   margin-bottom: clamp(2.25rem, 4vw, 3.5rem);
@@ -319,11 +323,12 @@ h1 strong {
 
 .project {
   display: grid;
-  grid-template-columns: minmax(180px, 260px) minmax(0, var(--copy-width));
+  width: min(100%, var(--copy-width));
+  grid-template-columns: minmax(180px, 220px) minmax(0, 1fr);
   grid-template-areas:
     "media intro"
     "media refs";
-  column-gap: clamp(2rem, 5vw, 5rem);
+  column-gap: clamp(1.5rem, 4vw, 2.5rem);
   row-gap: 0;
   align-items: start;
   padding: clamp(3rem, 6vw, 5.25rem) 0;
@@ -408,6 +413,7 @@ h1 strong {
 }
 
 .hdr-comparison__frame {
+  position: relative;
   width: 100%;
   aspect-ratio: 4 / 3;
   overflow: hidden;
@@ -415,6 +421,8 @@ h1 strong {
 }
 
 .hdr-comparison__frame img {
+  position: absolute;
+  inset: 0;
   display: block;
   width: 100%;
   height: 100%;
@@ -425,7 +433,11 @@ h1 strong {
   object-fit: contain;
 }
 
-.hdr-comparison span {
+.hdr-comparison__hdr {
+  opacity: 1;
+}
+
+.hdr-comparison > div > span {
   display: block;
   padding: 0.55rem 0.35rem;
   color: var(--muted);
@@ -435,6 +447,23 @@ h1 strong {
   line-height: 1.3;
   text-align: center;
   text-transform: uppercase;
+}
+
+.hdr-hover-hint {
+  font-weight: 550;
+  letter-spacing: 0;
+  text-transform: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  .hdr-comparison__hdr {
+    opacity: 0;
+    transition: opacity 140ms ease;
+  }
+
+  .hdr-comparison:has(> div:last-child:hover) .hdr-comparison__hdr {
+    opacity: 1;
+  }
 }
 
 .project-media-stack {
@@ -565,7 +594,7 @@ h1 strong {
   margin: 0.25rem 0;
 }
 
-@media (max-width: 1140px) {
+@media (max-width: 860px) {
   .project {
     grid-template-columns: minmax(0, var(--copy-width));
     grid-template-areas:
