@@ -305,24 +305,24 @@ h1 {
   line-height: 1;
 }
 
-.research-disclosure > summary {
+.section-disclosure > summary {
   cursor: pointer;
   list-style: none;
   user-select: none;
 }
 
-.research-disclosure > summary::-webkit-details-marker {
+.section-disclosure > summary::-webkit-details-marker {
   display: none;
 }
 
-.research-disclosure > summary h2 {
+.section-disclosure > summary h2 {
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
 }
 
-.research-disclosure > summary h2::after {
+.section-disclosure > summary h2::after {
   color: var(--muted);
   content: "+";
   font-size: 0.7em;
@@ -330,22 +330,26 @@ h1 {
   letter-spacing: 0;
 }
 
-.research-disclosure[open] > summary h2::after {
+.section-disclosure[open] > summary h2::after {
   content: "−";
 }
 
-.research-disclosure > summary:hover h2::after {
+.section-disclosure > summary:hover h2::after {
   color: var(--accent);
 }
 
-.research-disclosure > summary:focus-visible {
+.section-disclosure > summary:focus-visible {
   border-radius: 3px;
   outline: 3px solid rgba(23, 109, 105, 0.28);
   outline-offset: 5px;
 }
 
-.research-disclosure:not([open]) > .section-heading {
+.section-disclosure:not([open]) > .section-heading {
   margin-bottom: 0;
+}
+
+.work-section .section-disclosure:not([open]) {
+  padding-bottom: clamp(1.75rem, 3vw, 2.5rem);
 }
 
 .research-copy {
@@ -391,7 +395,7 @@ h1 {
   padding-bottom: clamp(1.375rem, 2vw, 1.875rem);
 }
 
-.work-section > .project:first-of-type {
+.work-section .section-disclosure > .project:first-of-type {
   padding-top: 0;
   border-top: 0;
 }
