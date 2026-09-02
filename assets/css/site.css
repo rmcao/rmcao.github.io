@@ -254,10 +254,6 @@ h1 {
   line-height: 0.95;
 }
 
-h1 strong {
-  font-weight: 760;
-}
-
 .bio {
   max-width: var(--copy-width);
   margin-inline: auto;
