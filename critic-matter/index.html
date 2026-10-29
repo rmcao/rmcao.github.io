@@ -1,0 +1,239 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A Better Critic Matters for Distribution Matching Distillation</title>
+  <meta name="description" content="Critic capacity and step conditioning in Distribution Matching Distillation: joint teacher–critic scaling and a step-aware critic (STAC).">
+  <link rel="canonical" href="https://rmcao.net/critic-matter/">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://rmcao.net/critic-matter/">
+  <meta property="og:title" content="A Better Critic Matters for Distribution Matching Distillation">
+  <meta property="og:description" content="Critic capacity and step conditioning in Distribution Matching Distillation: joint teacher–critic scaling and a step-aware critic (STAC).">
+  <meta property="og:image" content="https://rmcao.net/critic-matter/assets/social_preview.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="600">
+  <meta property="og:image:alt" content="Samples from a 4-step FLUX.2 student distilled with a critic as large as the teacher">
+  <meta name="twitter:card" content="summary_large_image">
+  <!-- Root-relative: the icon of rmcao.net, which hosts this page. -->
+  <link rel="icon" href="/assets/img/icon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="hero">
+  <!-- FLUX.2 teaser tiles arranged around the title. Wide screens (>= 1180 px): 9 x 6 grid (--c, --r);
+       medium screens: title on top, 8 x 5 tiles (--tc, --tr); phones (<= 560 px): title on top,
+       4 columns (--mc, --mr). Large tiles span 2 x 2. -->
+  <div class="mosaic-wrap">
+    <div class="mosaic" role="group" aria-label="Samples of a 4-step FLUX.2 [klein] 4B student distilled with a 9B teacher and a 9B critic with STAC">
+      <div class="title-card">
+        <h1>A Better Critic Matters for<br>Distribution Matching Distillation</h1>
+        <p class="authors">
+          <span class="author-row"><span><a href="https://betterze.github.io/website/">Zongze Wu</a><sup>1*</sup></span>, <span><a href="https://peppaking8.github.io/">Xianbang Wang</a><sup>2*&dagger;</sup></span>, <span><a href="https://gsunshine.github.io/">Zhengyang Geng</a><sup>1</sup></span>, <span><a href="https://github.com/ljzycmd">Mingdeng Cao</a><sup>1</sup></span>,</span>
+          <span class="author-row"><span><a href="https://ztzhang.info/">Zhoutong Zhang</a><sup>1</sup></span>, <span><a href="https://richzhang.github.io/">Richard Zhang</a><sup>1</sup></span>, <span><a href="https://research.adobe.com/person/eli-shechtman/">Eli Shechtman</a><sup>1</sup></span>, <span><a href="https://rmcao.net/">Ruiming Cao</a><sup>1</sup></span></span>
+        </p>
+        <div class="affil-line">
+          <p class="affiliations"><span><sup>1</sup>Adobe</span> <span><sup>2</sup>MIT</span></p>
+          <p class="author-notes"><span><sup>*</sup>Equal contribution</span> <span><sup>&dagger;</sup>Work done during an internship at Adobe</span></p>
+        </div>
+        <p class="paper-links">
+          <!-- Placeholder: replace XXXX.XXXXX with the arXiv ID once the paper is posted. -->
+          <a class="link-button" href="https://arxiv.org/abs/XXXX.XXXXX">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></svg>
+            arXiv
+          </a>
+          <!-- Placeholder: once the code is released, add href="<repository URL>", drop is-disabled and aria-disabled, and remove the "coming soon" note. -->
+          <a class="link-button is-disabled" aria-disabled="true">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m8 7-5 5 5 5M16 7l5 5-5 5"/></svg>
+            Code <span class="soon">(coming soon)</span>
+          </a>
+        </p>
+      </div>
+
+      <figure class="tile big" style="--c:1; --r:1; --mc:1; --mr:2; --tc:1; --tr:2"><img src="assets/teaser_tiles/portrait.jpg" alt="Portrait of an elderly woman in a floral headscarf"></figure>
+      <figure class="tile big" style="--c:3; --r:1; --mc:3; --mr:2; --tc:4; --tr:2"><img src="assets/teaser_tiles/book.jpg" alt="Green book titled Critic Matters among red roses"></figure>
+      <figure class="tile" style="--c:5; --r:1; --mc:1; --mr:4; --tc:6; --tr:2"><img src="assets/teaser_tiles/puppy.jpg" alt="Puppy lying in autumn leaves"></figure>
+      <figure class="tile" style="--c:5; --r:2; --mc:2; --mr:4; --tc:6; --tr:3"><img src="assets/teaser_tiles/jellyfish.jpg" alt="Glowing blue jellyfish"></figure>
+      <figure class="tile big" style="--c:6; --r:1; --mc:3; --mr:4; --tc:7; --tr:2"><img src="assets/teaser_tiles/hummingbird.jpg" alt="Stained-glass hummingbird and flowers"></figure>
+      <figure class="tile big" style="--c:8; --r:1; --mc:1; --mr:6; --tc:5; --tr:4"><img src="assets/teaser_tiles/cabin.jpg" alt="Log cabin interior with a fireplace and knitted blanket"></figure>
+
+      <figure class="tile" style="--c:1; --r:3; --mc:1; --mr:5; --tc:3; --tr:4"><img src="assets/teaser_tiles/art_nouveau.jpg" alt="Art nouveau illustration of a woman with flowers"></figure>
+      <figure class="tile" style="--c:1; --r:4; --mc:2; --mr:5; --tc:4; --tr:4"><img src="assets/teaser_tiles/lake.jpg" alt="Mountain lake with reflections"></figure>
+      <figure class="tile" style="--c:9; --r:3; --mc:3; --mr:6; --tc:7; --tr:4"><img src="assets/teaser_tiles/ink_landscape.jpg" alt="Ink-wash mountain landscape"></figure>
+      <figure class="tile" style="--c:9; --r:4; --mc:4; --mr:6; --tc:8; --tr:4"><img src="assets/teaser_tiles/parrot.jpg" alt="Red macaw on a black background"></figure>
+
+      <figure class="tile big" style="--c:1; --r:5; --mc:1; --mr:10; --tc:1; --tr:4"><img src="assets/teaser_tiles/tiger.jpg" alt="White tiger"></figure>
+      <figure class="tile" style="--c:3; --r:5; --mc:3; --mr:7; --tc:3; --tr:2"><img src="assets/teaser_tiles/ramen.jpg" alt="Bowl of ramen"></figure>
+      <figure class="tile" style="--c:3; --r:6; --mc:4; --mr:7; --tc:3; --tr:3"><img src="assets/teaser_tiles/wisteria.jpg" alt="Stone alley lined with purple wisteria"></figure>
+      <figure class="tile big" style="--c:4; --r:5; --mc:3; --mr:8; --tc:3; --tr:5"><img src="assets/teaser_tiles/kingfisher.jpg" alt="Kingfisher on a mossy branch"></figure>
+      <figure class="tile" style="--c:6; --r:5; --mc:1; --mr:8; --tc:1; --tr:6"><img src="assets/teaser_tiles/lavender.jpg" alt="Lavender field"></figure>
+      <figure class="tile" style="--c:6; --r:6; --mc:2; --mr:8; --tc:2; --tr:6"><img src="assets/teaser_tiles/snail_house.jpg" alt="Snail carrying a tiny house"></figure>
+      <figure class="tile" style="--c:7; --r:5; --mc:1; --mr:9; --tc:5; --tr:6"><img src="assets/teaser_tiles/rice_terraces.jpg" alt="Misty rice terraces"></figure>
+      <figure class="tile" style="--c:7; --r:6; --mc:2; --mr:9; --tc:6; --tr:6"><img src="assets/teaser_tiles/poppies.jpg" alt="Field of red poppies"></figure>
+      <figure class="tile big" style="--c:8; --r:5; --mc:3; --mr:10; --tc:7; --tr:5"><img src="assets/teaser_tiles/astronaut.jpg" alt="Earth reflected in an astronaut's helmet visor"></figure>
+    </div>
+  </div>
+
+  <figure class="teaser-video">
+    <img src="assets/teaser_video.jpg" alt="Film strip with three frames each of six generated videos: a woman twirling a yellow dress, a woman with purple hair, a white horse running through a stream, a hot-air balloon over hills, purple and orange smoke, and a sea turtle over a coral reef.">
+    <figcaption>
+      <strong>Few-step students distilled with a critic as large as the teacher.</strong>
+      Above, samples of a 4-step FLUX.2 [klein] 4B student distilled with a 9B teacher and a 9B critic w/ STAC.
+      Film strip, three frames each of six videos from a 4-step Wan2.1 1.3B student distilled with a 14B teacher and a 14B critic w/ STAC.
+      (Settings: FLUX.2 512&times;512, Wan2.1 480p.)
+    </figcaption>
+  </figure>
+</header>
+
+<main>
+  <section id="abstract" aria-labelledby="abstract-title">
+    <h2 id="abstract-title">Abstract</h2>
+    <p>
+      Distribution Matching Distillation (DMD) trains a few-step student using the difference between a teacher's score and an online critic's estimate of the student distribution's score.
+      We investigate how critic capacity and conditioning affect distillation.
+      Controlled experiments across seven SiT model sizes on ImageNet show that increasing teacher size while keeping a small critic fixed can degrade student quality and cause training collapse.
+      Scaling the critic alongside the teacher, which we call joint scaling, allows the student to benefit from larger teachers.
+      We also introduce a step-aware critic (STAC), which conditions on the student's generation step to estimate step-specific scores.
+      Under a pure distribution-matching objective, joint scaling and STAC together reduce the FID of a 4-step SiT-B student from 13.91 to 6.90 on ImageNet without CFG.
+      We further validate our findings on text-to-image and text-to-video generation with SDXL, FLUX.2, and Wan2.1.
+      Additionally, we explore critic designs and training strategies, with comprehensive results and ablations reported in the appendix.
+    </p>
+  </section>
+
+  <section id="critic-design" aria-labelledby="critic-design-title">
+    <h2 id="critic-design-title">Open questions about critic design</h2>
+    <p class="section-lead">We study two independent questions about the online critic. Within each comparison, the deployed student keeps the same size and number of sampling steps.</p>
+
+    <article class="question" id="critic-size" aria-labelledby="critic-size-title">
+      <h3 id="critic-size-title"><span class="q-num" aria-hidden="true">1</span>How large should the critic be?</h3>
+      <p class="answer">Scale it together with the teacher.</p>
+      <p>
+        Scaling the teacher while keeping a small critic fixed can degrade the student and even collapse training.
+        Scaling the critic alongside the teacher, which we call <em>joint scaling</em>, lets the same student benefit from larger teachers,
+        and matched teacher&ndash;critic pairs offer a favorable quality&ndash;compute tradeoff.
+      </p>
+      <figure class="paper-figure">
+        <div class="chart" data-chart="compute-pareto">
+          <img src="assets/compute_pareto.svg" alt="Best FID versus training TFLOPs per student update for fixed S students at one and four steps. Matched teacher–critic pairs, joined in size order from S to H, sit at or near the lowest FID for their compute, while most mismatched pairs lie above them.">
+          <div class="chart-points" role="group" aria-label="Runs in the figure; focus a point to read its details"></div>
+          <div class="chart-tooltip" id="compute-pareto-tooltip" role="tooltip" hidden></div>
+        </div>
+        <p class="chart-hint" hidden>Hover over or tap a point to see its run. With a keyboard, tab to the figure and use the arrow keys.</p>
+        <figcaption>
+          <strong>Training compute versus FID.</strong>
+          Best FID against the training compute of one student update for every non-collapsed teacher/critic pair of the S-student grids at (a) 1 and (b) 4 steps.
+          Matched pairs are labelled by size and joined in size order, and the FID axis is magnified toward the lowest values.
+          For their compute, matched pairs sit at or near the lowest FID, and most mismatched pairs lie above them.
+          Each point is the run with the lowest FID over training from a learning-rate sweep over student rates {4&times;10<sup>&minus;6</sup>, 8&times;10<sup>&minus;6</sup>, 1.2&times;10<sup>&minus;5</sup>} and critic rates {5&times;10<sup>&minus;7</sup>, 10<sup>&minus;6</sup>, 2&times;10<sup>&minus;6</sup>}; hover over a point to see its learning rates.
+          (Settings: ImageNet 256&times;256, w/o CFG; seven SiT sizes from 33M to 951M parameters.)
+        </figcaption>
+      </figure>
+    </article>
+
+    <article class="question" id="critic-conditioning" aria-labelledby="critic-conditioning-title">
+      <h3 id="critic-conditioning-title"><span class="q-num" aria-hidden="true">2</span>What should the critic be conditioned on?</h3>
+      <p class="answer">The critic should know the generation step.</p>
+      <p>
+        A multi-step student produces clean predictions with different characteristics at each generation step.
+        A standard critic sees the noise level <var>t</var> but not the generation step <var>k</var>, so it estimates the score of their mixture.
+        Our <em>step-aware critic</em> (STAC) also conditions on <var>k</var> to estimate each step's own score, with no added inference cost.
+      </p>
+      <figure class="paper-figure">
+        <img src="assets/fig06-stage-predictions.png" alt="Clean predictions from the four steps, k = 1 to 4, of the same SDXL generation: early predictions contain strong artifacts, and later predictions refine the face and the motorcycle wheel. All four images share a prompt and seed.">
+        <figcaption>
+          <strong>Generation quality varies sharply across steps.</strong>
+          Clean predictions of a 4-step SDXL student along one generation path with a shared prompt and seed.
+          The first step already fixes the overall color and layout but still carries significant artifacts;
+          the second step refines the image substantially, yet artifacts remain in detailed regions such as the face and the wheel;
+          the third step is near-perfect apart from residual artifacts around the mouth, which the last step removes.
+        </figcaption>
+      </figure>
+    </article>
+  </section>
+
+  <section id="text-to-image" aria-labelledby="t2i-title">
+    <h2 id="t2i-title">Text-to-image results</h2>
+    <p class="section-lead">On FLUX.2, a larger teacher alone gives little gain. Scaling the critic with the teacher, and adding STAC, improve the same 4-step 4B student.</p>
+    <div class="results results-compact">
+      <div class="results-numbers">
+        <h3>FLUX.2, 4B student, 4 steps</h3>
+        <div class="table-wrap">
+        <table class="metrics metrics-compact">
+          <thead>
+            <tr><th scope="col">Teacher / critic</th><th scope="col">HPSv3 &uarr;</th><th scope="col">DPG-Bench &uarr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>4B / 4B</td><td>10.58</td><td>81.58</td></tr>
+            <tr><td>9B / 4B</td><td>10.32</td><td>82.08</td></tr>
+            <tr><td>9B / 9B</td><td>10.92</td><td>83.70</td></tr>
+            <tr class="ours"><td><span>9B / 9B</span> <span>+ STAC</span></td><td>11.86</td><td>84.22</td></tr>
+            <tr><td>32B / 32B</td><td>12.10</td><td>84.98</td></tr>
+            <tr class="ours"><td><span>32B / 32B</span> <span>+ STAC</span></td><td><strong>12.32</strong></td><td><strong>85.28</strong></td></tr>
+          </tbody>
+        </table>
+        </div>
+      </div>
+      <div class="results-text">
+        <p>
+          With the 4B critic, the 9B teacher lowers HPSv3 from 10.58 to 10.32.
+          Scaling the critic to 9B as well raises both scores, and STAC raises them further.
+          The 32B teacher and critic give the strongest students: with STAC, the student reaches 12.32 HPSv3 and 85.28 DPG-Bench.
+        </p>
+        <p class="table-note">1024&times;1024. The 4B and 9B teachers and critics are FLUX.2 [klein] base; the 32B ones are FLUX.2 [dev]. Shaded rows add STAC.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="text-to-video" class="wide" aria-labelledby="t2v-title">
+    <h2 id="t2v-title">Text-to-video results</h2>
+    <p class="section-lead">On Wan2.1, joint scaling to a 14B teacher and critic raises the VBench total of the same 4-step 1.3B student, and STAC adds a small further gain.</p>
+    <div class="results">
+      <div class="results-numbers">
+        <h3>Wan2.1, 1.3B student, 4 steps</h3>
+        <div class="table-wrap">
+        <table class="metrics">
+          <thead>
+            <tr><th scope="col">Teacher / critic</th><th scope="col">Total &uarr;</th><th scope="col">Quality &uarr;</th><th scope="col">Semantic &uarr;</th><th scope="col">Dynamic &uarr;</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>1.3B / 1.3B</td><td>83.96</td><td>85.14</td><td>79.26</td><td>81.39</td></tr>
+            <tr><td>14B / 1.3B</td><td>83.94</td><td>84.73</td><td>80.79</td><td>52.06</td></tr>
+            <tr><td>14B / 14B</td><td>84.26</td><td>85.04</td><td>81.16</td><td>57.52</td></tr>
+            <tr class="ours"><td>14B / 14B + STAC</td><td>84.32</td><td>85.08</td><td>81.32</td><td>58.06</td></tr>
+          </tbody>
+        </table>
+        </div>
+        <p class="table-note">VBench, 480p. Autoregressive students that share the ODE-initialized student of Causal Forcing and the Self Forcing rollout; 14B / 1.3B is the default DMD recipe of Self Forcing. The shaded row adds STAC.</p>
+        <ul class="results-notes">
+          <li>The 1.3B / 1.3B pair has the highest Dynamic Degree but the lowest semantic score, with excessive motion and visible artifacts: Dynamic Degree alone does not measure quality.</li>
+          <li>With teacher, critic, and student all fixed at 1.3B, STAC also leads in VBench total at every evaluated iteration, in both bidirectional and autoregressive training.</li>
+        </ul>
+      </div>
+      <figure class="sample-gallery wan-gallery">
+        <p class="gallery-title">14B teacher and 14B critic, w/o STAC</p>
+        <div class="gallery-head" aria-hidden="true"><span>Start</span><span>2/3 duration</span><span>End</span></div>
+        <div class="gallery-row">
+          <img src="assets/wan/wan_prompt31_seed0_bigt_bigf_start.jpg" width="832" height="480" loading="lazy" alt="Start frame: silhouette of a wolf on a rock under a full moon">
+          <img src="assets/wan/wan_prompt31_seed0_bigt_bigf_two_thirds.jpg" width="832" height="480" loading="lazy" alt="Frame at two-thirds of the same wolf video">
+          <img src="assets/wan/wan_prompt31_seed0_bigt_bigf_end.jpg" width="832" height="480" loading="lazy" alt="Final frame of the same wolf video">
+        </div>
+        <p class="sample-prompt">&ldquo;A beautiful silhouette animation shows a wolf howling at the moon, feeling lonely, until it finds its pack.&rdquo;</p>
+        <div class="gallery-row">
+          <img src="assets/wan/wan_prompt15_seed1_bigt_bigf_start.jpg" width="832" height="480" loading="lazy" alt="Start frame: red pandas among bamboo growing in a petri dish">
+          <img src="assets/wan/wan_prompt15_seed1_bigt_bigf_two_thirds.jpg" width="832" height="480" loading="lazy" alt="Frame at two-thirds of the same red panda video">
+          <img src="assets/wan/wan_prompt15_seed1_bigt_bigf_end.jpg" width="832" height="480" loading="lazy" alt="Final frame of the same red panda video">
+        </div>
+        <p class="sample-prompt">&ldquo;A petri dish with a bamboo forest growing within it that has tiny red pandas running around.&rdquo;</p>
+        <figcaption>Still frames from videos of the 4-step Wan2.1-T2V-1.3B student. (Settings: autoregressive training with the Self Forcing rollout; 480p.)</figcaption>
+      </figure>
+    </div>
+  </section>
+
+  <p class="closing">Critic capacity and step information both matter for distillation.</p>
+</main>
+
+<script src="assets/compute_pareto_data.js" defer></script>
+<script src="compute_pareto.js" defer></script>
+</body>
+</html>
