@@ -140,7 +140,7 @@
         Our <em>step-aware critic</em> (STAC) also conditions on <var>k</var> to estimate each step's own score, with no added inference cost.
       </p>
       <figure class="paper-figure">
-        <img src="assets/fig06-stage-predictions.png" alt="Clean predictions from the four steps, k = 1 to 4, of the same SDXL generation: early predictions contain strong artifacts, and later predictions refine the face and the motorcycle wheel. All four images share a prompt and seed.">
+        <img src="assets/stage_predictions.png" width="1980" height="788" alt="Clean predictions from the four steps, k = 1 to 4, of the same SDXL generation: early predictions contain strong artifacts, and later predictions refine the face and the motorcycle wheel. All four images share a prompt and seed.">
         <figcaption>
           <strong>Generation quality varies sharply across steps.</strong>
           Clean predictions of a 4-step SDXL student along one generation path with a shared prompt and seed.
@@ -230,10 +230,39 @@
     </div>
   </section>
 
-  <p class="closing">Critic capacity and step information both matter for distillation.</p>
+  <section id="bibtex" aria-labelledby="bibtex-title">
+    <h2 id="bibtex-title">BibTeX</h2>
+    <div class="bibtex">
+      <!-- Placeholder: replace XXXX.XXXXX with the arXiv ID once the paper is posted (as in the arXiv button). -->
+      <pre><code id="bibtex-entry">@article{wu2026better,
+  title   = {A Better Critic Matters for Distribution Matching Distillation},
+  author  = {Wu, Zongze and Wang, Xianbang and Geng, Zhengyang and Cao, Mingdeng and
+             Zhang, Zhoutong and Zhang, Richard and Shechtman, Eli and Cao, Ruiming},
+  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  year    = {2026}
+}</code></pre>
+      <button type="button" class="copy-button" data-copy="bibtex-entry" hidden>Copy</button>
+    </div>
+  </section>
 </main>
 
 <script src="assets/compute_pareto_data.js" defer></script>
 <script src="compute_pareto.js" defer></script>
+<script>
+  // Copy button for the BibTeX block (shown only when the Clipboard API is available).
+  for (const button of document.querySelectorAll('.copy-button')) {
+    if (!navigator.clipboard) continue;
+    button.hidden = false;
+    button.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(document.getElementById(button.dataset.copy).textContent);
+        button.textContent = 'Copied';
+      } catch {
+        button.textContent = 'Copy failed';
+      }
+      setTimeout(() => { button.textContent = 'Copy'; }, 1600);
+    });
+  }
+</script>
 </body>
 </html>
